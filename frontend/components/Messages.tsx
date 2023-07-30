@@ -173,11 +173,12 @@ if (!loading) {
                 <div className=' mt-56 w-96'>
                     <h1>Nothing to see here</h1>            
                 </div>
-                :<div className=' '  style={{}}>
+                :<div className=''  style={{}}>
                 {notes.map((note) => (
                     <>
-                        <div  onContextMenu={(e) => handleContextMenu(note.block_id, e)} style={{background:'rgba(255, 255, 255, 0.56)', lineHeight:"normal" ,  fontSize:"16px", fontWeight:"400",backdropFilter:"blur(15px)", padding:"12px", maxWidth:"fit-content", borderRadius:"15px"}} key={note.block_id} className='mt-2 ml-auto  bg-gray-100'>
-                        
+                    {/* <div className='bg-red relative'>
+                           </div> */}
+                        <div  onContextMenu={(e) => handleContextMenu(note.block_id, e)} style={{background:'rgba(255, 255, 255, 0.56)', lineHeight:"normal" ,backdropFilter:"blur(15px)", padding:"12px", maxWidth:"fit-content", borderRadius:"15px"}} key={note.block_id} className='mt-2  ml-auto'>
                            {/* <p>{note.content}</p>  */}
                            {/* <input 
                                          autoFocus
@@ -187,7 +188,10 @@ if (!loading) {
                                          onChange={handleChange}
                            /> */}
                            {/* <div class="notranslate" spellcheck="true" placeholder="Press ‘space’ for AI, ‘/’ for commands…" data-content-editable-leaf="true" contenteditable="true" style="max-width: 100%; width: 100%; white-space: pre-wrap; word-break: break-word; caret-color: rgba(255, 255, 255, 0.81); padding: 3px 2px; text-align: left;">But I am still very bullish on the whole idea of AI generating it’s own book covers. AI animated videos are very much more engaging. I believe that it can capture the very essence of a book, it can even fucking analyze the contents of the fucking book and generate the best book cover you will ever fucking find <img class="notion-emoji" alt="😂" aria-label="😂" style="width:1em;height:1em;background-repeat:no-repeat;background:url(&quot;/images/emoji/twitter-emoji-spritesheet-64.d3a69865.png&quot;);background-position-x:54.23728813559322%;background-position-y:91.52542372881356%;background-size:6000% 6000%;vertical-align:-0.1em;margin:0 0.1em" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><img class="notion-emoji" alt="😂" aria-label="😂" style="width:1em;height:1em;background-repeat:no-repeat;background:url(&quot;/images/emoji/twitter-emoji-spritesheet-64.d3a69865.png&quot;);background-position-x:54.23728813559322%;background-position-y:91.52542372881356%;background-size:6000% 6000%;vertical-align:-0.1em;margin:0 0.1em" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">​</div> */}
-                           <div  onPaste={handlePaste} className='outline-none  cursor-text font-normal' style={{width:"fit-content"}}  placeholder='Write a note...' autoFocus  onInput={(e) => handleMessageUpdate(e,note.id)} contentEditable="true" dangerouslySetInnerHTML={{ __html: note.content}}/>
+                           
+                           <div  onPaste={handlePaste} className='outline-none   text-black filter-none z-50  cursor-text ' style={{width:"fit-content", fontSize:'16px', backdropFilter:"blur(0px)"}}  placeholder='Write a note...'     onInput={(e) => handleMessageUpdate(e,note.id)} contentEditable="true" dangerouslySetInnerHTML={{ __html: note.content}}/>
+
+                           
                             
                            
                            {/* <textarea

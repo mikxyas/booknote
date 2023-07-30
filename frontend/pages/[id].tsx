@@ -75,7 +75,7 @@ export default function Library() {
   // const {token} = useToken();
 // pass the user id and make zustand fetch all the data
   return (
-    <div style={{backgroundImage:"url('./flower.webp') ", backgroundSize:"center", backgroundRepeat:"no-repeat", backgroundAttachment:'fixed',backgroundPosition:"center", height:'100vh',width:'100vw'  }} className='h-screen w-screen flex overflow-hidden justify-center items-center'>
+    <div style={{backgroundImage:"url('./cool.jpg') ", backgroundSize:"center", backgroundRepeat:"no-repeat", backgroundAttachment:'fixed',backgroundPosition:"center", height:'100vh',width:'100vw'  }} className='h-screen w-screen flex overflow-hidden justify-center items-center'>
       {/* <div style={{"width": navWidth, "transition":".2s", "zIndex":1, "top":0, "left":0,background:'#FAFAFA'}} className=' p-2 container h-screen bg-gray-100 '>
         
         <div style={{background:"#EEEEE5"}} className='flex bg-gray-200 p-2 rounded justify-between'>
@@ -95,12 +95,12 @@ export default function Library() {
           :null
       }
       
-      <div style={{ background:"rgba(000, 000, 000, 0.2)"}}  className='w-full z-auto h-screen '>
+      <div  className='w-full z-auto h-screen '>
         <div className=''>
           <Header/>
         </div>
 
-      <div style={{marginTop:'225px'}} className='w-full flex flex-col justify-center bg-transparent items-center mt-5  p-3'>
+      <div style={{marginTop:'220px'}} className='w-full flex flex-col justify-center bg-transparent items-center mt-5  p-3'>
         {/* message area */}
         <Messages/>
         {/* message area */}
