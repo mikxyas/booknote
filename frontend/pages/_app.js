@@ -36,7 +36,7 @@ export default function MyApp({ Component, pageProps }) {
     console.log(token)
     return (
         <>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Component {...pageProps} />
         </>
     

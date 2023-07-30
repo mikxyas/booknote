@@ -71,13 +71,16 @@ export const useDataStore = create<State>(set => ({
     screenType: 'laptop',
     setScreenType: (screenType) => set((state) => ({screenType: screenType})),
 
+    bg: './flower.webp',
+    setBg: (link) => set((state) => ({bg:link})),
+
     setReFetchPage: () => set((state) => ({reFetchPage: !state.reFetchPage})),
     setCollapseNavbar:() => set((state) => ({collapseNavbar: !state.collapseNavbar})),
     setLogged: (isLoggedIn) => set((state) => ({loggedIn:isLoggedIn})),
     updateToken: () => set((state) => ({token: localStorage.getItem('token')})),
     setToken: (token) => {set((state) => ({token: token, loggedIn: true})), localStorage.setItem('token', token)},
     removeToken: () => {set((state) => ({token: '', loggedIn:false})), localStorage.removeItem('token')},
-    setUser: (user: User) => set((state) => ({user: user, active_active_book: user.active_book})),
+    setUser: (user: User) => set((state) => ({user: user})),
     setBlocks: (blocks) => set((state) => ({ blocks: blocks})),
     setShelf: (shelves) => set((state) => ({shelfs:shelves})),
     addShelf: (shelf) => set((state) => ({shelfs: state.shelfs + shelf })),

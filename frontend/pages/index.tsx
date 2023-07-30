@@ -13,13 +13,21 @@ export default function Home() {
   const [loading, setLoading] = useState(true)
   const setUser = useDataStore((state) => state.setUser)
   const setBlocks = useDataStore((state) => state.setBlocks)
+
     // function checkToken() {
   //   if(window.localStorage['getItem'])
   // }
 
+  // useEffect(() => {
+  //   if(token != ''){
+  //     Router.push('/app')
+  //   }
+  // }, [token])
+
   useEffect(() => {
     const url_token = localStorage.getItem("token")
-    fetch('http://127.0.0.1:5000/fetch', {
+    if(url_token){
+      fetch('http://127.0.0.1:5000/fetch', {
               method:"POST",
               headers: {
                 'Content-Type': 'application/json',
@@ -31,8 +39,11 @@ export default function Home() {
       setBlocks(result.blocks)
       setUser(result.user)
       console.log("hi")
-      Router.push('/' + result.user.active_chapter)
+      Router.push('/app')
     })
+    }
+
+    
     setLoading(false)
   },[])
 

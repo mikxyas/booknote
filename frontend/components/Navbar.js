@@ -56,9 +56,7 @@ function  Navbar() {
             </Link>
           </li>
         }
-        <li className="mr-6">
-            <button className='pt-4 pb-4 '>Link 3</button>
-        </li>
+       
     </ul>
 </nav>
     }

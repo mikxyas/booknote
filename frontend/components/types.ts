@@ -40,6 +40,8 @@ export interface State {
     showShelf:boolean,
     removeToken():void;
     setShowShelf(): void,
+    bg:string,
+    setBg(link:string):void,
     screenType: string,
     setScreenType(screenType: string): void,
 }

@@ -728,8 +728,16 @@ def getShelfs(current_user):
 def get_user_data(current_user):
         if request.method == "POST":
                 res = {}
+              
                 print(current_user)
                 user_data = current_user.toJSON()
+                lib = Library.query.filter_by(creator=current_user.id).scalar()
+                # if active_shelf is null create a fall back
+                active_shelf = Block.query.filter_by(id=lib.active_shelf).scalar()
+                if active_shelf != None:
+                        book = Book.query.filter_by(block_id=active_shelf.shelf[0].active_book).scalar()
+                        if book != None:
+                                user_data["active_chapter"] = book.active_chapter
                 res["user"] = user_data
                 return res
 

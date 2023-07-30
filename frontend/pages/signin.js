@@ -72,7 +72,7 @@ export default function signin() {
                     <input name="email" onChange={updateFeid} value={data.email} className='border-gray-300 appearance-none border rounded-full w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id="email" placeholder='EMAIL'/>
                 </div>    
                 <div className='mb-6'>
-                    <input name="password" onChange={updateFeid} value={data.password} className='border-gray-300 appearance-none border rounded-full w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id="password" placeholder='PASSWORD'/>
+                    <input type='password' name="password" onChange={updateFeid} value={data.password} className='border-gray-300 appearance-none border rounded-full w-full py-2.5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' id="password" placeholder='PASSWORD'/>
                 </div>
                 <div className='flex items-center justify-between'>
                     <button className='bg-red-600  text-white rounded-md' type="submit">SIGN IN</button>
