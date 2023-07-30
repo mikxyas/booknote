@@ -1,0 +1,6 @@
+Flask
+requests
+flask-cors
+Flask-SQLAlchemy
+Flask-Migrate
+flask-jwt-extended
