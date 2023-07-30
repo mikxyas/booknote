@@ -80,12 +80,12 @@ export default function AddBook() {
         {openForm
             ?
             <>
-            <div onClick={handleOpenForm} style={{height:"auto", position:"fixed", width:"23em", background:'rgba(229, 235, 238, 0.5)',backdropFilter:"blur(10px)"}} className={`shadow-lg ${openForm ? 'col-span-3' : ''}  z-50 hover:cursor-pointer right-0 flex flex-col rounded-md items-center pt-10 pb-10 top-50 left-0 bottom-50 m-auto`} >
+            <div onClick={handleOpenForm} style={{height:"auto", position:"fixed", width:"23em", background:'rgba(229, 235, 238, 0.5)',backdropFilter:"blur(10px)"}} className={`shadow-lg ${openForm ? 'col-span-3' : ''}  z-50 hover:cursor-pointer right-0 flex flex-col rounded-xl items-center pt-10 pb-10 top-50 left-0 bottom-50 m-auto`} >
                 
-                <input style={{width:"20em"}} value={formData.name} onChange={handleFormChange} className='p-3 rounded-xl m-2  outline-none' name="name" placeholder='Search the book you want to add' autoFocus/>
+                <input style={{width:"20em", background:  'rgba(400, 400, 400, 0.8)',}} value={formData.name} onChange={handleFormChange} className='p-3 rounded-lg mb-2  outline-none' name="name" placeholder='Search the book you want to add' autoFocus/>
                 <div  className='flex mb-3 justify-end items-end w-full mr-12'>
 
-                <button style={{background:  'rgba(225, 225, 225, 0.8)', boxShadow:'0px 1px 4px 0px rgba(0, 0, 0, 0.25)', borderRadius:'7px', fontSize:"16px", fontWeight:"400",marginLeft:""}} onClick={() => SearchBook(formData.name)}>Search</button>
+                <button style={{background:  'rgba(400, 400, 400, 0.8)', boxShadow:'0px 1px 4px 0px rgba(0, 0, 0, 0.25)', borderRadius:'7px', fontSize:"16px", fontWeight:"400",marginLeft:""}} onClick={() => SearchBook(formData.name)}>Search</button>
 
                 </div>
                 {/* <input value={formData.cover} onChange={handleFormChange} className='p-1 rounded-md ' name="cover" placeholder='Image URL'/> */}

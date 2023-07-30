@@ -38,6 +38,7 @@ export interface State {
     doRefetchAll():void,
     headerFetched: boolean,
     showShelf:boolean,
+    removeToken():void;
     setShowShelf(): void,
     screenType: string,
     setScreenType(screenType: string): void,

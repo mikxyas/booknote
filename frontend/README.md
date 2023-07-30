@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# booknote
+An app that lets you track your book notes in a pleasent interface 
+<img src='../demo/main.png'/>

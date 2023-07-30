@@ -259,7 +259,7 @@ export default function Header() {
     }
     if (loading == false && showChapterDeletedViwe == false){
         return (
-            <div style={{background:'rgba(229, 235, 238, 0.42)', height:"216px",backdropFilter:"blur(16.5px)", position:'fixed', }} className='w-full flex items-center  justify-center'>
+            <div style={{background:'rgba(229, 235, 238, 0.42)', height:"216px",backdropFilter:"blur(16.5px)", position:'fixed', }} className={`w-full flex items-center  justify-center ${screenType == "phone" ?'pl-5' : ""}`}>
              {/* <div onClick={() => setShowShelf()} className='   w-screen opacity-30 absolute' style={{height:'216px', marginTop:"-53px", marginLeft:"", zIndex:"1"}}>
 
             </div> */}
@@ -287,7 +287,7 @@ export default function Header() {
                 />
 
       
-        <div className='flex gap-7 overflow-x-auto  mr-5 m-1 mt-4 '>
+        <div className='flex gap-3 overflow-x-auto  mr-5 m-1 mt-4 '>
             <div onClick={() => create_untitled_chapter()} className='rounded flex justify-center  whitespace-nowrap cursor-pointer font-semibold text-black items-center'>
                 New <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
             </div>
@@ -350,8 +350,9 @@ export default function Header() {
                 : <div style={{zIndex:'inherit'}} className={`fixed z-50 flex items-center  text-black cursor-pointer font-extralight p-0  left-0 right-1   top-48 ${screenType=="phone" ?'justify-end mr-2' :'justify-center'}`}>
                 <button  style={{background:'rgba(225, 225, 225, 0.8)', borderRadius:'100px'}} className='z-50 pl-2 pr-2' onClick={() => setShowShelf()}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
-</svg>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122" />
+                </svg>
+
 
 
 
